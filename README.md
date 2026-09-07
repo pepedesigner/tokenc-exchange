@@ -3,7 +3,7 @@
 > **Decentralized Spot AI Compute & Inference Credit Trading Platform**
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/Platform-Web3%20%7C%20AI%20Inference-black)](https://aetherdex.io)
+[![Platform](https://img.shields.io/badge/Platform-Web3%20%7C%20AI%20Inference-black)](#)
 [![Twitter](https://img.shields.io/badge/X-@aetherdex-1da1f2.svg)](https://x.com/aetherdex)
 
 Aether is a decentralized marketplace for trading spot AI inference compute and credit allocations below list price. Featuring an automated liquidity order book, one-stop gateway key integration, key monetization for compute sellers, and a revenue-sharing dividend protocol for `$AETHER` holders.
@@ -101,6 +101,5 @@ aether-token-exchange/
 
 ## 📬 Contact & Community
 
-- **Website**: [https://aetherdex.io](https://aetherdex.io)
 - **X (Twitter)**: [@aetherdex](https://x.com/aetherdex)
 - **Email**: [contact@aetherdex.io](mailto:contact@aetherdex.io)
