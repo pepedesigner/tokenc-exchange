@@ -1,0 +1,507 @@
+
+/* Eliminate ALL Pillar variants across home, dashboard, holders, etc. */
+img[src*="pillar"],
+img[srcSet*="pillar"],
+.dashboard-pillar,
+.dashboard-pillar-left,
+.dashboard-pillar-right,
+.dashboard-pillars {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.holder-dashboard {
+  display: flex !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+}
+/* ==========================================================================
+   AETHER COMPUTE DEX — MODERN FINTECH REBRAND THEME
+   Warm editorial fintech & modern decentralized compute exchange
+   Maintains the warm paper/charcoal/bronze/lime palette while eliminating
+   all copycat elements (Roman columns, old-school serif, generic orb icon).
+   ========================================================================== */
+
+:root {
+  /* Warm Paper & Modern Architectural Palette */
+  --bg-canvas: #FAF8F4;
+  --bg-card: #FFFFFF;
+  --bg-card-subtle: #F6F3EC;
+  --bg-card-elevated: #FFFFFF;
+
+  --ink-primary: #121110;
+  --ink-secondary: #4A443B;
+  --ink-tertiary: #7D7365;
+  --ink-muted: #A89F91;
+
+  --border-subtle: rgba(74, 52, 25, 0.08);
+  --border-medium: rgba(74, 52, 25, 0.16);
+  --border-strong: rgba(74, 52, 25, 0.26);
+
+  --accent-bronze: #825827;
+  --accent-bronze-light: #F6ECE0;
+  --accent-gold: #D4AE7C;
+  --accent-lime: #D4FF33;
+  --accent-lime-hover: #C5F51E;
+  --accent-teal: #235952;
+  
+  --color-bid: #22794C;
+  --color-ask: #C03E32;
+
+  --font-modern-sans: var(--font-geist-sans), -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-modern-mono: var(--font-geist-mono), ui-monospace, SFMono-Regular, Menlo, monospace;
+  --font-newsreader: var(--font-modern-sans) !important;
+}
+
+@font-face {
+  font-family: 'Newsreader';
+  src: local(-apple-system), local(BlinkMacSystemFont), local("Segoe UI"), local(Roboto), local(sans-serif);
+}
+@font-face {
+  font-family: 'Newsreader Fallback';
+  src: local(-apple-system), local(BlinkMacSystemFont), local("Segoe UI"), local(Roboto), local(sans-serif);
+}
+
+/* 1. Eliminate the Roman Pillars & Classical Antiquity Tells */
+img[src*="credits-pillar"],
+img[srcSet*="credits-pillar"],
+div:has(> div > img[src*="credits-pillar"]),
+div:has(> div > img[srcSet*="credits-pillar"]),
+div:has(> div > div > img[src*="credits-pillar"]),
+div:has(> div > div > img[srcSet*="credits-pillar"]) {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+/* Subtle architectural grid lines instead of Roman columns */
+body {
+  background-color: var(--bg-canvas) !important;
+  color: var(--ink-primary) !important;
+  font-family: var(--font-modern-sans) !important;
+  background-image: 
+    radial-gradient(circle, rgba(107, 74, 36, 0.10) 1px, transparent 1px) !important;
+  background-size: 32px 32px !important;
+  background-position: center top !important;
+}
+
+/* 2. Modern Swiss / High-End Fintech Typography */
+h1, h2, h3, h4, h5, h6,
+.font-display,
+.display,
+[class*="display"],
+[class*="newsreader"] {
+  font-family: var(--font-modern-sans) !important;
+  letter-spacing: -0.03em !important;
+  font-weight: 650 !important;
+}
+
+.tabular.display,
+.display.tabular,
+p.tabular.display {
+  font-family: var(--font-modern-sans) !important;
+  letter-spacing: -0.035em !important;
+  font-weight: 650 !important;
+}
+
+/* Completely remove the crude yellow highlighter box */
+.marker::before,
+mark.marker::before,
+mark::before {
+  display: none !important;
+  content: none !important;
+}
+
+mark.marker {
+  background: transparent !important;
+  color: #121110 !important;
+  position: relative !important;
+  display: inline-block !important;
+  padding: 0 4px !important;
+  border-bottom: 3px solid var(--accent-bronze) !important;
+  border-radius: 1px !important;
+}
+
+/* 3. Modern Navbar & Brand Transformation */
+header, .absolute.inset-x-0.top-5 {
+  backdrop-filter: blur(16px) !important;
+  background: rgba(250, 248, 244, 0.90) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+/* Unified Brand Logo: Modern Geometric Aether Compute Emblem */
+header a[href="/"] img,
+header a[href="/sell"] img,
+header a[href="/holders"] img,
+header a.flex img,
+.absolute.inset-x-0 a[href="/"] img,
+.absolute.inset-x-0 a[href="/sell"] img,
+.absolute.inset-x-0 a.flex img {
+  display: inline-block !important;
+  width: 28px !important;
+  height: 28px !important;
+  border-radius: 7px !important;
+  object-fit: contain !important;
+  box-shadow: 0 1px 3px rgba(18, 17, 16, 0.12) !important;
+  transition: transform 0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+header a:hover img,
+.absolute.inset-x-0 a:hover img {
+  transform: scale(1.08) rotate(3deg) !important;
+}
+
+/* Explicitly ensure stray preload or hidden images are never rendered */
+body > img,
+img[style*="display: none"],
+img[style*="display:none"],
+img[hidden] {
+  display: none !important;
+}
+
+/* Modern Pill Badge next to Brand */
+nav[aria-label="Buyers or sellers"] {
+  border-color: var(--border-medium) !important;
+}
+nav[aria-label="Buyers or sellers"] span[aria-current="page"] {
+  color: var(--ink-primary) !important;
+  text-decoration: none !important;
+  font-weight: 600 !important;
+  background: var(--bg-card) !important;
+  border: 1px solid var(--border-medium) !important;
+  padding: 3px 10px !important;
+  border-radius: 9999px !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03) !important;
+}
+
+/* 4. Modern Refined Cards & Elevation */
+.bg-paper, 
+div[class*="bg-paper"] {
+  background-color: var(--bg-card) !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: 0 1px 3px rgba(74, 52, 25, 0.04), 0 8px 24px -8px rgba(74, 52, 25, 0.08) !important;
+  border-radius: 18px !important;
+}
+
+.bg-paper-2,
+div[class*="bg-paper-2"] {
+  background-color: var(--bg-card-subtle) !important;
+}
+
+.border-line {
+  border-color: var(--border-subtle) !important;
+}
+.border-line-strong {
+  border-color: var(--border-medium) !important;
+}
+
+/* 5. Modern DEX Swap / Purchase Card Overhaul */
+.beam {
+  padding: 0 !important;
+  background: transparent !important;
+}
+.beam > div {
+  border-radius: 20px !important;
+}
+
+/* Button Upgrades: Crisp, decisive, tactile */
+button.bg-neon,
+.bg-neon {
+  background-color: var(--accent-lime) !important;
+  color: #121110 !important;
+  font-weight: 650 !important;
+  border-radius: 12px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08), 0 6px 16px -4px rgba(212, 255, 51, 0.6) !important;
+  transition: all 0.15s ease !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+}
+button.bg-neon:hover {
+  background-color: var(--accent-lime-hover) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 8px 20px -4px rgba(212, 255, 51, 0.75) !important;
+}
+button.bg-neon:active {
+  transform: translateY(0) !important;
+}
+
+/* ==========================================================================
+   UNIFIED DESIGN SPECIFICATION: BUTTONS & CTAs
+   Universal Obsidian Dark Compute (#121110) for all primary actions across:
+   /dashboard, /holders, /account, /supply, /points, /leaderboard
+   ========================================================================== */
+button.bg-bronze-800,
+a.bg-bronze-800,
+[class*="bg-bronze-800"],
+button.bg-bronze-700,
+a.bg-bronze-700,
+.points-dark-cta {
+  background-color: #121110 !important;
+  color: #FAF8F4 !important;
+  border: 1px solid #2e2821 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 6px 18px -4px rgba(18, 17, 16, 0.25) !important;
+  border-radius: 12px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  transition: all 0.18s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+button.bg-bronze-800:hover,
+a.bg-bronze-800:hover,
+[class*="bg-bronze-800"]:hover,
+button.bg-bronze-700:hover,
+a.bg-bronze-700:hover,
+.points-dark-cta:hover {
+  background-color: #24201c !important;
+  color: #FFFFFF !important;
+  border-color: var(--accent-bronze) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16), 0 10px 24px -4px rgba(130, 88, 39, 0.28) !important;
+}
+
+/* Refined Ivory & Bronze Badges (Eliminates raw yellow highlighters on subpages) */
+a[href*="discount"].bg-neon,
+a.border-neon-2.bg-neon,
+.border-neon-2.bg-neon,
+a.rounded-full.bg-neon {
+  background-color: var(--accent-bronze-light) !important;
+  border: 1px solid rgba(130, 88, 39, 0.28) !important;
+  color: var(--accent-bronze) !important;
+  box-shadow: 0 1px 2px rgba(74, 52, 25, 0.04), 0 0 0 3px rgba(130, 88, 39, 0.10) !important;
+  font-weight: 550 !important;
+}
+
+a[href*="discount"].bg-neon:hover,
+a.border-neon-2.bg-neon:hover,
+a.rounded-full.bg-neon:hover {
+  background-color: #EFE4D5 !important;
+  border-color: rgba(130, 88, 39, 0.45) !important;
+  color: #63421B !important;
+  box-shadow: 0 2px 4px rgba(74, 52, 25, 0.08), 0 0 0 3px rgba(130, 88, 39, 0.16) !important;
+}
+
+a.border-neon-2.bg-neon span.bg-\[\#141413\],
+a.rounded-full.bg-neon span[class*="bg-"],
+a.rounded-full.bg-neon span.text-neon {
+  background-color: var(--accent-bronze) !important;
+  color: #FFFFFF !important;
+}
+
+/* 6. Professional Orderbook (Liquidity Book) Styling */
+#book .border-line-strong {
+  border-radius: 18px !important;
+  border: 1px solid var(--border-medium) !important;
+}
+
+#book header {
+  background: var(--bg-card-subtle) !important;
+  border-bottom: 1px solid var(--border-subtle) !important;
+}
+
+/* Depth Bar micro-polish */
+.book-bar {
+  border-radius: 3px 0 0 3px !important;
+}
+
+/* 7. Model Pricing Matrix - Clean Financial Table Styling */
+ol.divide-line > li {
+  transition: background-color 0.15s ease !important;
+}
+ol.divide-line > li:hover {
+  background-color: rgba(246, 243, 236, 0.6) !important;
+}
+
+/* 8. Dashboard & Account Pages: Clean SaaS / DeX Polish */
+.tabular {
+  font-feature-settings: "tnum" on, "zero" on !important;
+}
+
+/* Clean status indicators */
+span.bg-neon.size-1\.5 {
+  background-color: var(--color-bid) !important;
+}
+
+/* 9. Header bar on subpages */
+header.border-line {
+  background: rgba(250, 248, 244, 0.95) !important;
+  backdrop-filter: blur(12px) !important;
+}
+
+/* 10. Smooth modern scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(107, 74, 36, 0.15);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(107, 74, 36, 0.28);
+}
+
+/* 11. Sellers Landing (/sell) & Supply Management (/supply) Rebrand */
+.decoration-neon-2 {
+  text-decoration-color: #d2ae7c !important;
+}
+
+/* Seller Hero Action Button: Architectural Dark Compute Style */
+a[href="/supply"].bg-neon {
+  background-color: #121110 !important;
+  color: #FAF8F4 !important;
+  border: 1px solid #2e2821 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.12), 0 8px 24px -6px rgba(18, 17, 16, 0.4) !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em !important;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+a[href="/supply"].bg-neon:hover {
+  background-color: #24201c !important;
+  color: #FFFFFF !important;
+  border-color: #825827 !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.16), 0 12px 28px -6px rgba(130, 88, 39, 0.3) !important;
+}
+
+/* Sellers choice comparison cards */
+.credits-voice .border-line-strong.bg-paper {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(74, 52, 25, 0.12) !important;
+  box-shadow: 0 1px 3px rgba(74, 52, 25, 0.04), 0 12px 32px -10px rgba(74, 52, 25, 0.07) !important;
+  border-radius: 20px !important;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+.credits-voice .border-line-strong.bg-paper:hover {
+  border-color: rgba(130, 88, 39, 0.32) !important;
+  box-shadow: 0 2px 8px rgba(74, 52, 25, 0.06), 0 16px 40px -10px rgba(130, 88, 39, 0.12) !important;
+}
+
+.credits-voice .border-line-strong.bg-paper p.font-mono.absolute {
+  background: #FAF8F4 !important;
+  border: 1px solid rgba(74, 52, 25, 0.16) !important;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03) !important;
+}
+
+/* Four-step listing cards */
+ol li.border-line.bg-paper {
+  background: #FFFFFF !important;
+  border: 1px solid rgba(74, 52, 25, 0.10) !important;
+  box-shadow: 0 1px 3px rgba(74, 52, 25, 0.03) !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.2s ease, box-shadow 0.2s ease !important;
+}
+
+ol li.border-line.bg-paper:hover {
+  transform: translateY(-2px) !important;
+  border-color: rgba(130, 88, 39, 0.35) !important;
+  box-shadow: 0 4px 16px -4px rgba(74, 52, 25, 0.10) !important;
+}
+
+ol li.border-line.bg-paper p.font-mono {
+  color: #825827 !important;
+  font-weight: 700 !important;
+  letter-spacing: 0.05em !important;
+}
+
+/* Header Dashboard CTA Button */
+.absolute.inset-x-0 a.bg-neon,
+header a.bg-neon {
+  background-color: #121110 !important;
+  color: #FAF8F4 !important;
+  border: 1px solid #332d26 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08) !important;
+}
+.absolute.inset-x-0 a.bg-neon:hover,
+header a.bg-neon:hover {
+  background-color: #24201c !important;
+  color: #FFFFFF !important;
+  border-color: #825827 !important;
+}
+
+/* Supply page Action Buttons */
+.credits-voice button.bg-neon {
+  background-color: #121110 !important;
+  color: #FAF8F4 !important;
+  border: 1px solid #2e2821 !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.10) !important;
+  font-weight: 600 !important;
+}
+.credits-voice button.bg-neon:hover {
+  background-color: #24201c !important;
+  color: #FFFFFF !important;
+  border-color: #825827 !important;
+}
+
+/* Supply Dashboard Polish */
+main.credits-voice,
+.credits-voice {
+  font-family: var(--font-modern-sans) !important;
+}
+
+/* Ensure Reveal animations are gracefully visible on all viewports */
+[class*="data-shown:opacity-100"] {
+  opacity: 1 !important;
+  transform: none !important;
+  filter: none !important;
+}
+
+/* ==========================================================================
+   UNIFIED DESIGN SPECIFICATION: DATA VISUALIZATIONS & METRIC CHARTS
+   Harmonizes charts on /account, /dashboard, and /leaderboard with warm bronze
+   and amber compute accents instead of raw fluorescent highlighters.
+   ========================================================================== */
+
+/* Account Spend & Compute Usage Bars */
+div.book-bar.bg-neon,
+div[class*="book-bar"][class*="bg-neon"] {
+  background: linear-gradient(180deg, var(--accent-gold) 0%, var(--accent-bronze) 100%) !important;
+  border-radius: 2px !important;
+  opacity: 0.9 !important;
+  transition: opacity 0.15s ease, transform 0.15s ease !important;
+}
+
+div.book-bar.bg-neon:hover {
+  opacity: 1 !important;
+  transform: scaleY(1.05) !important;
+}
+
+/* Usage Notice & Alert Cards */
+div[class*="border-neon-2/60"],
+div[class*="bg-neon/25"],
+div[class*="bg-neon/"] {
+  background-color: rgba(246, 236, 224, 0.65) !important;
+  border-color: rgba(130, 88, 39, 0.22) !important;
+  color: var(--ink-secondary) !important;
+  box-shadow: 0 1px 3px rgba(74, 52, 25, 0.03) !important;
+}
+
+/* Secondary & Neutral Tactile Action Buttons */
+button.bg-white,
+a.bg-white {
+  background-color: #FFFFFF !important;
+  color: var(--ink-primary) !important;
+  border: 1px solid rgba(74, 52, 25, 0.14) !important;
+  box-shadow: 0 1px 2px rgba(74, 52, 25, 0.04) !important;
+  transition: all 0.18s ease !important;
+}
+
+button.bg-white:hover,
+a.bg-white:hover {
+  background-color: var(--bg-card-subtle) !important;
+  border-color: rgba(130, 88, 39, 0.35) !important;
+  color: #121110 !important;
+  box-shadow: 0 2px 4px rgba(74, 52, 25, 0.06) !important;
+}
+
+/* Modals & Dialogs Elevation */
+div[role="dialog"] {
+  background-color: #FFFFFF !important;
+  border: 1px solid var(--border-medium) !important;
+  box-shadow: 0 16px 48px -12px rgba(74, 52, 25, 0.18) !important;
+  border-radius: 20px !important;
+}

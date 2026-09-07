@@ -1,0 +1,19 @@
+# OS files
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.bak
+*.tmp
+
+# Temporary migration scripts
+clone_orbio.py
+fix_serve.py
+update_mock.py
+update_sales.py
+update_sales2.py
+update_full_mock.py
+scratch/
