@@ -1,12 +1,12 @@
 {
-  "name": "aether-dex",
+  "name": "tokenc-dex",
   "version": "1.0.0",
-  "description": "Aether DEX - Spot AI Compute & Inference Credit Trading Platform",
+  "description": "TokenC DEX - Spot AI Compute & Inference Credit Trading Platform",
   "scripts": {
     "start": "python3 serve.py",
     "serve": "python3 serve.py"
   },
-  "keywords": ["aether", "ai-credits", "compute-dex", "spot-market"],
-  "author": "Aether DEX Team",
+  "keywords": ["tokenc", "ai-credits", "compute-dex", "spot-market"],
+  "author": "TokenC DEX Team",
   "license": "ISC"
 }

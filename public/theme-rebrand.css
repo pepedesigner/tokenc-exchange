@@ -18,7 +18,7 @@ img[srcSet*="pillar"],
   visibility: visible !important;
 }
 /* ==========================================================================
-   AETHER COMPUTE DEX — MODERN FINTECH REBRAND THEME
+   TOKENC COMPUTE DEX — MODERN FINTECH REBRAND THEME
    Warm editorial fintech & modern decentralized compute exchange
    Maintains the warm paper/charcoal/bronze/lime palette while eliminating
    all copycat elements (Roman columns, old-school serif, generic orb icon).
@@ -131,7 +131,7 @@ header, .absolute.inset-x-0.top-5 {
   border-bottom: 1px solid var(--border-subtle) !important;
 }
 
-/* Unified Brand Logo: Modern Geometric Aether Compute Emblem */
+/* Unified Brand Logo: Modern Geometric TokenC Compute Emblem */
 header a[href="/"] img,
 header a[href="/sell"] img,
 header a[href="/holders"] img,

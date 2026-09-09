@@ -31,7 +31,7 @@ ROUTE_MAP = {
     "/mcp": "pages/mcp.html",
 }
 
-# Complete Mock User for all Aether DEX sub-systems
+# Complete Mock User for all TokenC DEX sub-systems
 MOCK_USER = {
     "account": {
         "balanceMicroUsd": "150000000",   # $150.00
@@ -75,8 +75,8 @@ MOCK_USER = {
         ]
     },
     "user": {
-        "id": "did:privy:aether_test_user_001",
-        "email": "tester@aetherdex.io",
+        "id": "did:privy:tokenc_test_user_001",
+        "email": "tester@tokencdex.io",
         "address": "0x71C8360d8C8b8b3294829374028C54bA2d87eA01"
     }
 }
@@ -107,7 +107,7 @@ MOCK_USAGE = {
     ]
 }
 
-class AetherDexHandler(http.server.SimpleHTTPRequestHandler):
+class TokenCDexHandler(http.server.SimpleHTTPRequestHandler):
     def end_headers(self):
         self.send_header("Access-Control-Allow-Origin", "*")
         self.send_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, DELETE, PUT")
@@ -434,7 +434,7 @@ def run():
     socketserver.TCPServer.allow_reuse_address = True
     for p in range(port, port + 20):
         try:
-            httpd = http.server.ThreadingHTTPServer(("", p), AetherDexHandler)
+            httpd = http.server.ThreadingHTTPServer(("", p), TokenCDexHandler)
             port = p
             break
         except OSError:
@@ -444,7 +444,7 @@ def run():
         sys.exit(1)
 
     print(f"==================================================")
-    print(f" Aether DEX is running at http://localhost:{port}")
+    print(f" TokenC DEX is running at http://localhost:{port}")
     print(f" Available routes:")
     for r in ROUTE_MAP:
         print(f"   http://localhost:{port}{r}")

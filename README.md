@@ -1,18 +1,18 @@
-# Aether DEX
+# TokenC DEX
 
 > **Decentralized Spot AI Compute & Inference Credit Trading Platform**
 
 [![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](LICENSE)
 [![Platform](https://img.shields.io/badge/Platform-Web3%20%7C%20AI%20Inference-black)](#)
-[![Twitter](https://img.shields.io/badge/X-@aetherdex-1da1f2.svg)](https://x.com/aetherdex)
+[![Twitter](https://img.shields.io/badge/X-@tokencdex-1da1f2.svg)](https://x.com/tokencdex)
 
-Aether is a decentralized marketplace for trading spot AI inference compute and credit allocations below list price. Featuring an automated liquidity order book, one-stop gateway key integration, key monetization for compute sellers, and a revenue-sharing dividend protocol for `$AETHER` holders.
+TokenC is a decentralized marketplace for trading spot AI inference compute and credit allocations below list price. Featuring an automated liquidity order book, one-stop gateway key integration, key monetization for compute sellers, and a revenue-sharing dividend protocol for `$TOKENC` holders.
 
 ---
 
 ## 📸 Overview
 
-![Aether DEX Homepage](screenshots/homepage.png)
+![TokenC DEX Homepage](screenshots/homepage.png)
 
 ---
 
@@ -21,7 +21,7 @@ Aether is a decentralized marketplace for trading spot AI inference compute and 
 - **Spot Market Discount**: Purchase foundation model inference credit at deep market discounts with real-time liquidity book pricing.
 - **Universal Gateway Key**: One API key compatible with any OpenAI or Anthropic SDK, routing across 430+ foundation models with <50ms added latency.
 - **Key Staking & Monetization**: Sellers can list idle API keys, set floor discounts, and get paid automatically in USDG as requests are filled.
-- **Holder Dividends**: 50% of platform fees are converted into inference credits and distributed to `$AETHER` token holders every hour.
+- **Holder Dividends**: 50% of platform fees are converted into inference credits and distributed to `$TOKENC` token holders every hour.
 - **Model Context Protocol (MCP)**: Native MCP integration allowing AI agents (Claude Code, Codex) to autonomously monitor balances and top up keys.
 
 ---
@@ -52,8 +52,8 @@ Open your browser and navigate to: **http://localhost:3001**
 | **`/account`** | **Buyer Portal** — Manage gateway API keys, view 30-day spend analytics, and monitor token usage |
 | **`/sell`** | **Sellers Landing** — Overview of listing idle API keys and monetizing excess compute |
 | **`/supply`** | **Key Management** — List keys, set discount floors, view fill rates, and claim earnings |
-| **`/dashboard`** | **Holder Dashboard** — Track earned credits, claimable USDG balance, and active Aether keys |
-| **`/holders`** | **Holders Guide** — Tokenomics breakdown and fee distribution mechanism for `$AETHER` holders |
+| **`/dashboard`** | **Holder Dashboard** — Track earned credits, claimable USDG balance, and active TokenC keys |
+| **`/holders`** | **Holders Guide** — Tokenomics breakdown and fee distribution mechanism for `$TOKENC` holders |
 | **`/points`** | **Rewards & Points** — Season 1 points progression, tier multipliers, and earning rules |
 | **`/leaderboard`** | **Leaderboard** — Top liquidity suppliers, traders, and points ranking |
 | **`/mcp`** | **MCP Integration** — Protocol documentation, configuration snippets, and CLI setup guides |
@@ -64,7 +64,7 @@ Open your browser and navigate to: **http://localhost:3001**
 ## 📁 Project Structure
 
 ```
-aether-token-exchange/
+tokenc-exchange/
 ├── screenshots/             # Interface previews & documentation assets
 │   └── homepage.png         # High-resolution homepage preview
 ├── pages/                   # Standalone HTML routes
@@ -101,5 +101,5 @@ aether-token-exchange/
 
 ## 📬 Contact & Community
 
-- **X (Twitter)**: [@aetherdex](https://x.com/aetherdex)
-- **Email**: [contact@aetherdex.io](mailto:contact@aetherdex.io)
+- **X (Twitter)**: [@tokencdex](https://x.com/tokencdex)
+- **Email**: [contact@tokencdex.io](mailto:contact@tokencdex.io)
